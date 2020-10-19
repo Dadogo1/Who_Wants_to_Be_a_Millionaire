@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A237E"
+    tools:context=".LogIn">
+
+    <!--The logo for decoration-->
+    <ImageView
+        android:id="@+id/log_in_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="200sp"
+        android:layout_marginBottom="175dp"
+        android:contentDescription="@string/logo_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_who_wants_to_be_a_millionaire_logo" />
+
+    <!--The field to input first name-->
+    <EditText
+        android:id="@+id/first_name_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="@string/first_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_in_logo" />
+
+    <!--The field to input last name-->
+    <EditText
+        android:id="@+id/last_name_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:hint="@string/last_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_name_field" />
+
+    <!--The button to start the game-->
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/start_button"
+        app:layout_constraintEnd_toStartOf="@+id/dummy"
+        app:layout_constraintTop_toBottomOf="@+id/last_name_field" />
+
+    <!--The button to see the score board-->
+    <Button
+        android:id="@+id/score_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/score_button"
+        app:layout_constraintStart_toEndOf="@+id/dummy"
+        app:layout_constraintTop_toBottomOf="@+id/last_name_field" />
+
+    <!--It is simply just an anchor for the other objects-->
+    <Button
+        android:id="@+id/dummy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_name_field" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

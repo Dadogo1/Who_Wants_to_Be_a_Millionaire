@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A237E"
+    tools:context=".Question8">
+
+    <!--The current score-->
+    <TextView
+        android:id="@+id/Q8_SCORE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:textColor="#C0CA33"
+        android:textSize="75sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--The divider between the score and question-->
+    <View
+        android:id="@+id/Q8_DIVIDER"
+        android:layout_width="380sp"
+        android:layout_height="3sp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Q8_SCORE"
+        tools:ignore="SmallSp" />
+
+    <!--The question itself-->
+    <TextView
+        android:id="@+id/Q8"
+        android:layout_width="380sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Q8"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Q8_SCORE" />
+
+    <!--The answers the player will pick-->
+    <RadioGroup
+        android:id="@+id/Q8_ANSWERS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Q8">
+
+        <RadioButton
+            android:id="@+id/A8_A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/A8_B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/A8_C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/A8_D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <!--The button to confirm the answer-->
+    <Button
+        android:id="@+id/Q8_answer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/answer_button"
+        app:layout_constraintEnd_toStartOf="@+id/Q8_PAGE"
+        app:layout_constraintTop_toBottomOf="@+id/Q8_ANSWERS" />
+
+    <!--The button to safely quit the game-->
+    <Button
+        android:id="@+id/Q8_withdraw_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/withdraw_button"
+        app:layout_constraintStart_toEndOf="@+id/Q8_PAGE"
+        app:layout_constraintTop_toBottomOf="@+id/Q8_ANSWERS" />
+
+    <!--To inform on what question the player is currently on-->
+    <TextView
+        android:id="@+id/Q8_PAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/Q8_Page"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Q8_ANSWERS" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
